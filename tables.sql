@@ -1,0 +1,8 @@
+-- Active: 1674519275952@@35.226.146.116@3306@jbl-4416874-jucicrede-brito
+CREATE TABLE IF NOT EXISTS Verify_users (
+    id VARCHAR(64) PRIMARY KEY,
+    name VARCHAR(64) NOT NULL,
+    email VARCHAR(64) NOT NULL,
+    password VARCHAR(64) NOT NULL
+);
+SELECT * FROM `Verify_users` LIMIT 100;
