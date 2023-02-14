@@ -1,16 +1,28 @@
+### Fazer Signup
+
 POST http://localhost:3003/user/signup
 Content-Type: application/json
 
 {
-   "name": "Amanda", 
-   "email": "amanda@gmail.com" ,
+   "name": "Filomena", 
+   "email": "filo@gmail.com" ,
    "password": "1234567"
 }
-### 
+
+
+### Fazer Login
 POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-   "email": "amanda@gmail.com" ,
+   "email": "lia@gmail.com" ,
    "password": "1234567"
 }
+
+
+### Exibir profile do Usuário
+
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViNTUwOTRlLTM4NWUtNDY0Yy05MjU0LWI2MTMzMmNmYTc2MiIsImlhdCI6MTY3NjM3NDY5MiwiZXhwIjoxNjc2Mzc4MjkyfQ.6ugFUCwV2EKv1msA_1zfowbmIKCTSnWgf2j3gM6RKNM
+Content-Type: application/json
+

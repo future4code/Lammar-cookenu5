@@ -1,5 +1,5 @@
-import { CustomError } from "../error/CustomError";
-import { user } from "../model/user";
+import { CustomError } from "../error/customError";
+import { ProfileInputDTO, user } from "../model/user";
 import { BaseDatabase } from "./BaseDatabase";
 
 export class UserDatabase extends BaseDatabase {
@@ -28,4 +28,24 @@ export class UserDatabase extends BaseDatabase {
       throw new CustomError(400, error.message);
     }
   };
+
+  public getProfile = async (id:string):Promise<ProfileInputDTO[]> => {
+    try {
+      const result = await UserDatabase.connection.select().where({id}).from("Verify_users");
+      
+      return result
+    } catch (error: any) {
+      throw new CustomError(error.statusCode, error.message);
+    }
+  };
 }
+
+// public getProfile = async (id:string):Promise<ProfileInputDTO[]> => {
+//   try {
+//     const result = await UserDatabase.connection.select().where({id}).from("Verify_users");
+    
+//     return result
+//   } catch (error: any) {
+//     throw new CustomError(error.statusCode, error.message);
+//   }
+// };

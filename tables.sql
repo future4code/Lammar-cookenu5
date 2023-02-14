@@ -1,4 +1,4 @@
--- Active: 1674519275952@@35.226.146.116@3306@jbl-4416874-jucicrede-brito
+-- Active: 1674174693537@@35.226.146.116@3306@jbl-4417156-caroline-cunha
 CREATE TABLE IF NOT EXISTS Verify_users (
     id VARCHAR(64) PRIMARY KEY,
     name VARCHAR(64) NOT NULL,
