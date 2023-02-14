@@ -16,6 +16,23 @@ export type user = {
     password: string
  }
 
+ export interface profileInputUserDTO {
+   id: string,
+   name: string,
+   email: string
+ };
+
+ export interface ProfileInputDTO {
+    token: string
+ }
+
 export type AuthenticationData = {
     id: string
  }
+
+//  export interface profileUser {
+//    id: string,
+//    name: string,
+//    email: string
+
+//  }
