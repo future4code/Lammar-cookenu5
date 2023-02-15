@@ -6,3 +6,10 @@ CREATE TABLE IF NOT EXISTS Verify_users (
     password VARCHAR(64) NOT NULL
 );
 SELECT * FROM `Verify_users` LIMIT 100;
+
+CREATE TABLE IF NOT EXISTS Recipes_list (
+    id VARCHAR(64) PRIMARY KEY,
+    title VARCHAR(64) NOT NULL,
+    description VARCHAR(64) NOT NULL,
+    created_at VARCHAR(64) NOT NULL
+)

@@ -45,9 +45,10 @@ export class UserController {
         try {
           const input: ProfileInputDTO = {
           token: req.headers.authorization as string
-       };
+        };
+        
         const userBusiness = new UserBusiness()
-        const profile = await userBusiness.getProfile(input.token);
+        const profile = await userBusiness.getProfile(input);
 
         res.status(200).send(profile);
   
