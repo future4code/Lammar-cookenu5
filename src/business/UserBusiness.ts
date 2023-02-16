@@ -92,14 +92,15 @@ export class UserBusiness {
     }
   };
 
-  public getProfile = async (token:string) => {
+  public getProfile = async (input:ProfileInputDTO) => {
     // public getProfile = async (id:string) => {
     try {
 
-      // const id = authenticator.generateToken()
+      const payload = authenticator.getTokenData(input.token)
+      const id = payload.id
       const userDatabase = new UserDatabase()
-      return await userDatabase.getProfile(token);
-      // return await userDatabase.getProfile(id)
+      return await userDatabase.getProfile(id);
+     
 
     } catch (error: any) {
       throw new CustomError(400, error.message);

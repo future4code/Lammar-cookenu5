@@ -4,8 +4,8 @@ POST http://localhost:3003/user/signup
 Content-Type: application/json
 
 {
-   "name": "Filomena", 
-   "email": "filo@gmail.com" ,
+   "name": "Leia", 
+   "email": "princesa@gmail.com" ,
    "password": "1234567"
 }
 
@@ -15,7 +15,7 @@ POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-   "email": "lia@gmail.com" ,
+   "email": "princesa@gmail.com" ,
    "password": "1234567"
 }
 
@@ -23,6 +23,17 @@ Content-Type: application/json
 ### Exibir profile do Usuário
 
 GET http://localhost:3003/user/profile
-Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjViNTUwOTRlLTM4NWUtNDY0Yy05MjU0LWI2MTMzMmNmYTc2MiIsImlhdCI6MTY3NjM3NDY5MiwiZXhwIjoxNjc2Mzc4MjkyfQ.6ugFUCwV2EKv1msA_1zfowbmIKCTSnWgf2j3gM6RKNM
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6ImVkMWQ1ZDRhLTAxYWUtNDA5My05ZTBlLTZlOWFkM2I2OTY1NyIsImlhdCI6MTY3NjQyMDE1NiwiZXhwIjoxNjc2NDIzNzU2fQ.zLAOr16I3_wRRqJEI5Nmi4IfewxPEliTqYQ4ivy6UQM
 Content-Type: application/json
 
+
+### Criar receita
+
+POST http://localhost:3003/recipe/createRecipe
+Content-Type: application/json
+
+{
+   "title": "Água borbulhante", 
+   "description": "Colocar no fogo alto e esperar dar 100°C",
+   "createdAt": "2023-02-14"
+}
