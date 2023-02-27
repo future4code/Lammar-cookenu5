@@ -1,16 +1,39 @@
+### Fazer Signup
+
 POST http://localhost:3003/user/signup
 Content-Type: application/json
 
 {
-   "name": "Amanda", 
-   "email": "amanda@gmail.com" ,
+   "name": "Grogu", 
+   "email": "baby@gmail.com" ,
    "password": "1234567"
 }
-### 
+
+
+### Fazer Login
 POST http://localhost:3003/user/login
 Content-Type: application/json
 
 {
-   "email": "amanda@gmail.com" ,
+   "email": "baby@gmail.com" ,
    "password": "1234567"
+}
+
+
+### Exibir profile do Usuário
+
+GET http://localhost:3003/user/profile
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAyNDhjYzVjLTJhNmQtNDgxOC05OGRhLTIwNWM2MDdjZWZmNyIsImlhdCI6MTY3NjU5NTQ1NiwiZXhwIjoxNjc2NTk1NDg2fQ.MtVE7vC180OEo1Jy1j9MXlyBJXzmlM8bEIXyu0t3OII
+
+
+### Criar receita
+
+POST http://localhost:3003/recipe/createRecipe
+Content-Type: application/json
+Authorization: eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjAyNDhjYzVjLTJhNmQtNDgxOC05OGRhLTIwNWM2MDdjZWZmNyIsImlhdCI6MTY3NjU5NTY5MiwiZXhwIjoxNjc2NTk1NzIyfQ.uRR-KqZz_Vi7MwzHFn8FwQP3BA6aiWaxXLVG2Gi1UFM
+
+{
+   "title": "Vitamina de banana", 
+   "description": "bata no liquidificador uma banana e um copo de leite ",
+   "createdAt": "2023-02-14"
 }

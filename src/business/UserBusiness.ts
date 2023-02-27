@@ -1,9 +1,10 @@
 import { UserDatabase } from "../data/UserDatabase";
-import { CustomError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/CustomError";
+import { CustomError, InvalidEmail, InvalidName, InvalidPassword, UserNotFound } from "../error/customError";
 import {
   UserInputDTO,
   user,
-  LoginInputDTO
+  LoginInputDTO,
+  ProfileInputDTO
 } from "../model/user";
 import { Authenticator } from "../services/Authenticator";
 import { IdGenerator } from "../services/IdGenerator";
@@ -19,7 +20,7 @@ export class UserBusiness {
       if (!name || !email || !password) {
         throw new CustomError(
           400,
-          'Preencha os campos "name","nickname", "email" e "password"'
+          'Preencha os campos "name","email" e "password"'
         );
       }
 
@@ -50,6 +51,7 @@ export class UserBusiness {
       const token = authenticator.generateToken({id})
 
       return token
+
     } catch (error: any) {
       throw new CustomError(400, error.message);
     }
@@ -63,9 +65,9 @@ export class UserBusiness {
         throw new CustomError(400,'Preencha os campos "email" e "password"');
       }
 
-      if (password.length < 6) {
-        throw new InvalidPassword();
-      }
+      // if (password.length < 6) {
+      //   throw new InvalidPassword();
+      // }
 
       if (!email.includes("@")) {
         throw new InvalidEmail();
@@ -85,6 +87,21 @@ export class UserBusiness {
       const token = authenticator.generateToken({id: user.id})
 
       return token
+    } catch (error: any) {
+      throw new CustomError(400, error.message);
+    }
+  };
+
+  public getProfile = async (input:ProfileInputDTO) => {
+    // public getProfile = async (id:string) => {
+    try {
+      
+      const payload = authenticator.getTokenData(input.token)
+      const id = payload.id
+      const userDatabase = new UserDatabase()
+      return await userDatabase.getProfile(id);
+     
+
     } catch (error: any) {
       throw new CustomError(400, error.message);
     }
