@@ -15,5 +15,6 @@ export type Recipe = {
 export type RecipeInputDTO = {
     title: string,
     description: string,
-    createdAt: string
+    createdAt: string,
+    token: string
 }
