@@ -29,10 +29,3 @@ export type user = {
 export type AuthenticationData = {
     id: string
  }
-
-//  export interface profileUser {
-//    id: string,
-//    name: string,
-//    email: string
-
-//  }

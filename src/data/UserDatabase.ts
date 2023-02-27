@@ -39,13 +39,3 @@ export class UserDatabase extends BaseDatabase {
     }
   };
 }
-
-// public getProfile = async (id:string):Promise<ProfileInputDTO[]> => {
-//   try {
-//     const result = await UserDatabase.connection.select().where({id}).from("Verify_users");
-    
-//     return result
-//   } catch (error: any) {
-//     throw new CustomError(error.statusCode, error.message);
-//   }
-// };

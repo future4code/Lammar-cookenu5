@@ -93,7 +93,7 @@ export class UserBusiness {
   };
 
   public getProfile = async (input:ProfileInputDTO) => {
-    // public getProfile = async (id:string) => {
+   
     try {
       
       const payload = authenticator.getTokenData(input.token)
