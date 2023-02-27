@@ -39,12 +39,12 @@ DOCUMENTAÇÃO
 
 ## O QUE NÃO FOI REALIZADO
 -- Seguir usuário
+
 -- Feed
 
 
 ### LINKS
     ### DEPLOY - 
 
-    ### DOCUMENTAÇÃO - https://documenter.getpostman.com/view/22349315/2s93CGRbZR
-
+   
     ### DOCUMENTAÇÃO - https://documenter.getpostman.com/view/22349315/2s93CGRbZR
